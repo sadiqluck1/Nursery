@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  @Styles.Render("~/Content/css")
+</head>
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" border="0" /></a></div>
+    <div id="menu">
+      <ul>
+         @if (Session["Id"] == null)
+          {
+        <li class="selected">@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("about us", "aboutus", "Home")</li>
+        <li>@Html.ActionLink("flowers", "flowers", "Home")</li>
+        <li>@Html.ActionLink("special gifts", "specialgifts", "Home")</li>
+        <li>@Html.ActionLink("myaccount", "myaccount", "Account")</li>
+        <li>@Html.ActionLink("register", "register", "Account")</li>
+        <li>@Html.ActionLink("prices", "prices", "Home")</li>
+        <li>@Html.ActionLink("contactus", "contactus", "Home")</li>
+          }
+          else
+          {
+        <li class="selected">@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("flowers", "flowers", "Home")</li>
+        <li>@Html.ActionLink("special gifts", "specialgifts", "Home")</li>
+        <li><a href="/Account/logout/@Session["Id"]">Logout</a></li>
+        <li>@Html.ActionLink("prices", "prices", "Home")</li>
+        <li>@Html.ActionLink("contactus", "contactus", "Home")</li>
+        <li>@Html.ActionLink("CartItems", "cartitems", "Account")</li>
+           }
+      </ul>
+    </div>
+  </div>

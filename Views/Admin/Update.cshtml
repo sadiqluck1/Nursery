@@ -1,0 +1,66 @@
+﻿@model Nurseysite.Models.plant
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    < <script src="~/Scripts/prototype.js" type="text/javascript"></script>
+<script src="~/Scripts/scriptaculous.js?load=effects" type="text/javascript"></script>
+<script src="~/Scripts/lightbox.js" type="text/javascript"></script>
+<script type="text/javascript" src="~/Scripts/java.js"></script>
+  <script src="~/Scripts/lightbox.js">b</script>
+
+</head>
+<body>
+   <div id="wrap">
+@{
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+   <h2>Update the Extisting data     
+         <a href="/Admin/adminlogout/@Session["Id"]">logout</a>
+</h2>
+
+        </div>
+
+    <div class="contact_form">
+          <div class="form_subtitle">Enter the details to add the plants</div>
+<form action="/Admin/updateConfirm/@Model.Id" method="post" enctype="multipart/form-data">            <div class="form_row">
+              <label class="contact"><strong>Planst name:</strong></label>
+  <input type="text" value="@Model.names" name="t1"/>
+
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Plantstype</strong></label>
+  <input type="text" value="@Model.types" name="t2"/>
+       </div>
+            <div class="form_row">
+              <label class="contact"><strong>flower Name:</strong></label>
+  <input type="text" value="@Model.flowers" name="t3"/>
+
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>flower description:</strong></label>
+ <input type="text" value="@Model.descs" name="t4"/>
+            </div>
+            <div class="form_row">
+     </div>
+            <div class="form_row">
+      
+  change  Upload Image: <input type="file" name="image"  value="@Model.images"/>
+</div>  
+              <input type="submit" class="register" value="Update Plant" />
+
+
+
+</form>
+                           </div>
+          
+   
+        </div>
+
+       </body>
+    </html>

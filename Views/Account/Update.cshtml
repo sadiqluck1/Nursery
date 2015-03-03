@@ -1,0 +1,10 @@
+﻿@model Nurseysite.Models.User
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<form action="/Home/updateConfirm" method="post">
+    Name <input type="text" value="@Model.name" name="t1" />
+    <input type="submit" value="Update Student"/>
+</form>

@@ -1,0 +1,68 @@
+﻿@model List<Nurseysite.Models.plant>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    < <script src="~/Scripts/prototype.js" type="text/javascript"></script>
+<script src="~/Scripts/scriptaculous.js?load=effects" type="text/javascript"></script>
+<script src="~/Scripts/lightbox.js" type="text/javascript"></script>
+<script type="text/javascript" src="~/Scripts/java.js"></script>
+  <script src="~/Scripts/lightbox.js"></script>
+
+</head>
+<body>
+   <div id="wrap">
+@{
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h2><a href="/Admin/adminlogout/@Session["Id"]">logout</a></h2>
+
+                              
+       <h2>List of Students</h2>
+       
+<table>
+
+    <tr>
+        <td>ID</td>
+        <td>Names</td>
+        <td>Type</td>
+        <td>Flower</td>
+        <td>Descs</td>
+        <td>images</td>
+        <td></td>
+    </tr>
+ 
+        @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.names</td>
+            <td>@s.types</td>
+            <td>@s.flowers</td>
+            <td>@s.descs</td>
+            <td><img src="~/App_Data/@s.images"  width="80" height="80"/></td>
+            
+            <td>
+                <a href="/Admin/Update/@s.Id">Update</a>
+                <a href="/Admin/Delete/@s.Id">Delete</a>
+            </td>
+        </tr>
+    }
+
+
+
+       </table>
+
+
+
+      </div>
+</body>
+   </html>

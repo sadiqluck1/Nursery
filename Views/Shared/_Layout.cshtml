@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="wrap">
+  <div class="header">
+    <div class="logo"><a href="#"><img src="../images/logo.gif" alt="" border="0" /></a></div>
+    <div id="menu">
+      <ul>
+          @if (Session["Id"] == null)
+          {
+        <li class="selected">@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("about us", "aboutus", "Home")</li>
+        <li>@Html.ActionLink("flowers", "flowers", "Home")</li>
+        <li>@Html.ActionLink("special gifts", "specialgifts", "Home")</li>
+        <li>@Html.ActionLink("myaccount", "myaccount", "Account")</li>
+        <li>@Html.ActionLink("register", "register", "Account")</li>
+        <li>@Html.ActionLink("prices", "prices", "Home")</li>
+        <li>@Html.ActionLink("contactus", "contactus", "Home")</li>
+          }
+          else
+          {
+        <li class="selected">@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("flowers", "flowers", "Home")</li>
+        <li>@Html.ActionLink("special gifts", "specialgifts", "Home")</li>
+        <li><a href="/Account/logout/@Session["Id"]">Logout</a></li>
+        <li>@Html.ActionLink("prices", "prices", "Home")</li>
+        <li>@Html.ActionLink("contactus", "contactus", "Home")</li>
+        <li>@Html.ActionLink("UserPanel", "Users", "Account")</li>
+        <li>@Html.ActionLink("CartItems", "cartitems", "Account")</li>
+           }
+      </ul>
+    </div>
+  </div>
+        </div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+
+       
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@model List<Nurseysite.Models.plant>
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    Layout = "~/Views/Shared/userlayout.cshtml";
+}
+                <a href="/Account/logout/@Session["Id"]">logout</a>
+
+
+<h2>List of Students</h2>
+
+<table>
+    <tr>
+        <td>Your Account SID</td>
+        <td>Your  Name</td>
+        <td>Flowers Buyed</td>
+        <td>Flower Description</td>
+        <td>Your Image</td>
+    </tr>
+
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.names</td>
+    <td>@s.flowers</td>
+    <td>@s.descs</td>
+      <td>  <img src="~/App_Data/@s.images" width="150" height="150" />
+</td>  
+        
+        </tr>
+    }
+</table>

@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "flower1",
+        "shortname" : "Nama",
+		"characteristics":"Unique",
+        "bio" : "Have you ever wondered what a Gerbera looks like? Or how to care for the beautiful African violet you received? This section will help you answer these questions and more with its photographs, descriptions, special care tips and other interesting facts for many common flower and plant varieties. Be sure to ask your florist about their fresh flowers in stock."
+    },
+    {
+        "name" : "rose",
+        "shortname" : "wagon_tn",
+		"characteristics":"small",
+        "bio" : "Enjoy the natural beauty of plants by checking out our great range of plant pictures. There are photos of a wide range of plants including flowers, bamboo, trees, ferns, roses, orchids, grass and more. Whether you like tropical plants, coastline plants, wild plants or even poisonous plants, you can browse to find free pics of exactly what you're looking for. The pictures are from a variety of locations around the planet and include a number of different angles and lighting conditions. Click on the photo you like and see the image in full."
+    }
+	,
+	
+	 {
+        "name" : "Dixie Chip Ajuga",
+        "shortname" : "Evergreen",
+		"characteristics":"Unique",
+        "bio" : " 	Unique, tri-colored foliage in shades of burgundy, green and cream. It hha bluish flowers in spring on a plant that is usually ab out 3 inches tall. Makes a good, low growing ground cover. This selection has has green, cream, and rose-purple variegated foliage that create a spectacular display in the landscape. "
+    }
+]

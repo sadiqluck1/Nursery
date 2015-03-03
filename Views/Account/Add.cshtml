@@ -1,0 +1,11 @@
+﻿@model Nurseysite.Models.User
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<form action="/Account/AddStudent" method="post">
+    Name @Html.TextBoxFor(model => model.name)
+    @*<input type="text"  name="Name"/>*@
+    <input type="submit" value="Add Student" />
+</form>

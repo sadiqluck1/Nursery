@@ -10,7 +10,9 @@
     @Html.HiddenFor(model => model.notify_url)
     @Html.HiddenFor(model => model.currency_code)
     @Html.HiddenFor(model => model.item_name)
-        @model PaypalMVC.Models.PayPalModel
+    @Html.HiddenFor(model => model.item_no)
+    @Html.HiddenFor(model => model.amount)
+
 
 <body>
     <form id="hiddenform" action=@Model.actionURL>

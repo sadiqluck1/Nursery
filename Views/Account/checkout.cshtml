@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+    <div>
+        <table >
+
+            <tr>
+                <td>
+                    Total Items:
+                </td>
+                <td>
+                    <input type="text" name="product" value="@Session["totalitems"]" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price:
+                </td>
+                <td>
+                    $<input type="text" name="totalPrice" value="@Session["totalcost"]" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}

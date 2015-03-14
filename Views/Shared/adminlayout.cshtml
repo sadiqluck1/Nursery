@@ -23,12 +23,25 @@
     <div class="logo"><a href="#"><img src="../images/logo.gif" alt="" border="0" /></a></div>
     <div id="menu">
       <ul>
+            @if (Session["Id"] == null)
+          {
         <li class="selected">@Html.ActionLink("Add plants", "addplants", "Admin")</li>
         <li>@Html.ActionLink("Display Plants", "displayplants", "Admin")</li>
         <li>@Html.ActionLink("Users", "user", "Admin")</li>
         <li>@Html.ActionLink("Search Plants", "search", "Admin")</li>
- <li><a href="/Admin/adminlogout/@Session["Id"]">Logout</a></li>
-
+            }
+             
+          else
+          {   
+                        <li class="selected">@Html.ActionLink("Add plants", "addplants", "Admin")</li>
+        <li>@Html.ActionLink("Display Plants", "displayplants", "Admin")</li>
+        <li>@Html.ActionLink("Users", "user", "Admin")</li>
+        <li>@Html.ActionLink("Search Plants", "search", "Admin")</li>
+                <li><a href="/Admin/adminlogout/@Session["Id"]">Logout</a></li>
+           
+            
+            
+            }
       </ul>
     </div>
   </div>

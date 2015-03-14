@@ -73,7 +73,9 @@ width:100px !important;
         <td><a href="/Home/Cancel/@s.Id"><img src="~/images/Cancel.png" width="20" height="20" /></a></td>
     
     </tr>
-  
+                  int j = 0;
+                  Session["j"] = @s.Id;
+                  j++;
         }
     }
         Session["totalitems"] = totalitems;
